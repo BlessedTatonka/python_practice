@@ -12,8 +12,7 @@ def write_data(file_name, data):
     file.write(data)
     file.close()
     
-    
-    
+
 def read_data(file_name):
     file = open(file_name)
     content = file.read()
@@ -45,16 +44,16 @@ def convert_row_to_pretty_json(keys, row):
     
     return a
 
+
 def convert_csv_to_json(data):
     title, data = prepare_data(data)
 
     if len(data) == 0:
     	data = ["," * (len(title) - 1)]
-    
-    result = [convert_row_to_pretty_json(title, row) for row in data]  
-    
-    return some_replaces_to_do_it_all(result)
         
+    result = [convert_row_to_pretty_json(title, row) for row in data]  
+    return some_replaces_to_do_it_all(result)
+
 def some_replaces_to_do_it_all(row):
 	res = str(row).\
 		replace('\'', '\"').\
@@ -67,14 +66,11 @@ def some_replaces_to_do_it_all(row):
 	return res
 	
 def main():
-	args = sys.argv[1:]
-	try:
-		data = read_data_to_list(args[0])
-		result = convert_csv_to_json(data)
-		write_data(args[1], result)
-	except:
-		print('Some error occured')
-
+    args = sys.argv[1:]
+    data = read_data_to_list(args[0])
+    result = convert_csv_to_json(data)
+    write_data(args[1], result)
+	
 
 if __name__ == "__main__":
     main()

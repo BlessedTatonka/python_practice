@@ -67,8 +67,8 @@ def filter14(x: str):
         return False
 
 def main():
-    string = "A simple sentence has the most basic elements that make it a sentence: a subject a verb and a completed thought"
-
+    string = "A simple sentence has the most basic elements that make it a sentence: \
+         a subject a verb and a completed thought"
 
     # 1
     res1 = list(filter(filter1, range(1001)))
@@ -119,7 +119,9 @@ def main():
     res14 = list(map(lambda x: str(int(x) ** 2), filter(filter14, strings)))
 
     # 15
-    
+    input_str = """name,Petya,Vasya,Masha,Vova grade,5,5,8,3 subject,math,language,physics,math year,1999,2000,1995,1998"""
+    res15 = [dict(zip(list([row.split(',')[0] for row in input_str.split(' ')]),\
+         list([row.split(',')[i + 1] for row in input_str.split(' ')]))) for i, _ in enumerate(input_str.split(' ')[0].split(',')[1:])]
 
     # 16
     a = [[11.9, 12.2, 12.9],
@@ -127,9 +129,6 @@ def main():
         [16.3, 16.5, 16.5],
         [17.7, 17.5, 18.1]]
     res16 = [sum(row[i] for row in a) for i in range(len(a[0]))]
-
-
-    print(res16)
 
 if __name__ == "__main__":
     main()

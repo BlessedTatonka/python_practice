@@ -1,28 +1,13 @@
-from manual import ManualCsvConverter
+# import json
 
-def read_data_to_list(file_name):
-    file = open(file_name)
-    content = file.readlines()
-    file.close()
-    return content
+# def main():
+#     with open('input.json', 'r') as fin:
+#         request = dict(json.loads(fin.read()))
+
+#     request['hour_income'] = round(request[''], 2)
 
 
-def write_data(file_name, data):
-    file = open(file_name, 'w')
-    file.write(data)
-    file.close()
-        
-        
-def main():
-    data = read_data_to_list("input.csv")
+# if __name__ == '__main__':
+#     main()
 
-    #['id','5']
-    #['id,name',"5,ngeknvjdk"]
-    #['id,name', ""]
-    converter = ManualCsvConverter(data)
-    result = converter.to_json()
-    write_data("output.json", result)
-    
-    
-if __name__ == "__main__":
-    main()
+## Я не понял, как получилось значение 49950.87

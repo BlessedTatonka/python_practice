@@ -1,0 +1,46 @@
+BANK: 1000.0
+START_PRICE: 20.11
+STOP_PRICE: 19.0
+PAIR: APE-FTT
+
+target 1: 21.5 FTT
+Percent: 1.069
+Bank: 1069.12 FTT
+Target size: 356.373 FTT
+
+target 2: 22.8 FTT
+Percent: 1.134
+Bank: 1133.764 FTT
+Target size: 377.921 FTT
+
+target 3: 23.5 FTT
+Percent: 1.169
+Bank: 1168.573 FTT
+Target size: 389.524 FTT
+
+Strategy income: 1123.819; percent: 12.382
+
+----------------------------------------------
+BANK: 50.0
+START_PRICE: 3.01
+STOP_PRICE: 2.8
+PAIR: CTY-QWE
+
+target 1: 3.105 QWE
+Percent: 1.032
+Bank: 51.578 QWE
+Target size: 17.193 QWE
+
+target 2: 3.27 QWE
+Percent: 1.086
+Bank: 54.319 QWE
+Target size: 18.106 QWE
+
+target 3: 3.4 QWE
+Percent: 1.13
+Bank: 56.478 QWE
+Target size: 18.826 QWE
+
+Strategy income: 54.125; percent: 8.25
+
+----------------------------------------------

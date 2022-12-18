@@ -1,4 +1,4 @@
-from complex import Complex
+from complex_number import ComplexNumber as Complex
 import unittest
 
 class TestComplex(unittest.TestCase):
@@ -50,5 +50,3 @@ class TestComplex(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-
-
