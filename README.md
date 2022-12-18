@@ -1,3 +1,4 @@
-# python_practice
+# python_practice 
+Малашенко Борис
 
 В папках hw1-hw7 расположены задачи с 1 по 7
