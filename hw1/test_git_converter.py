@@ -3,7 +3,7 @@ import unittest
 
 class TestGitConverter(unittest.TestCase):
     def test_prepare_title(self):
-        self.assertEqual(prepare_title('# title'), '+ []()\n\n## \n\n')
+        self.assertEqual(prepare_title('# title'), '+ [](#)\n\n## \n\n')
 
     def test_prepare_desc(self):
         self.assertEqual(prepare_desc('# description'), '\n\n')

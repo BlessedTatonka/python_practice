@@ -1,6 +1,6 @@
-# title Какая-то прорамма
-# description Напечатать на экран Hello!
+# title Print Greeting
+# description Напечатать на экран Greeting!
 # ---end----
 
-def print_hello():
-    print('Hello!')
+def print_greeting():
+    print('Greeting!')

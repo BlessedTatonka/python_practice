@@ -70,6 +70,5 @@ def main():
     tc = TradeConverter()
     tc.fit()
         
-
 if __name__ == '__main__':
     main()

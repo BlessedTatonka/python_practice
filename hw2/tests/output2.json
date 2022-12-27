@@ -1,0 +1,23 @@
+[
+    {
+        "id": "1",
+        "name": "",
+        "birth": "1980",
+        "salary": "150000",
+        "department": "1"
+    },
+    {
+        "id": "2",
+        "name": "Alex",
+        "birth": "",
+        "salary": "200000",
+        "department": "5"
+    },
+    {
+        "id": "4",
+        "name": "Ivan",
+        "birth": "",
+        "salary": "",
+        "department": "8"
+    }
+]

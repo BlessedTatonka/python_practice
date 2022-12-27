@@ -1,7 +1,7 @@
 def prepare_title(line):
     title = ' '.join(line.split('# title')[1:]).strip()
     res = ''
-    res += f'+ [{title}]({"-".join(title.lower().split(" "))})\n'
+    res += f'+ [{title}]({"#" + "-".join(title.lower().split(" "))})\n'
     res += '\n'
     res += f'## {title}\n'
     res += '\n'
@@ -31,7 +31,8 @@ def convert_to_md(path_to_solution='solution.py', path_to_md='out.md'):
                     line = fin.readline()
 
                 fout.write(f'```python\n{"".join(fin.readlines()).strip()}\n```')
-    except:
-        print('Some exception occured')
+    except Exception as e:
+        # print(e)
+        pass
         
 convert_to_md('solution.py', 'out.md')

@@ -72,56 +72,71 @@ def main():
 
     # 1
     res1 = list(filter(filter1, range(1001)))
+    print(f'1: {res1}\n')
     
     # 2
     res2 = list(filter(filter2, range(1001)))
+    print(f'2: {res2}\n')
 
     # 3
     res3 = list(filter(filter3, range(10001)))
-    
+    print(f'3: {res3}\n')
+
     # 4
     res4 = len(list(filter(filter4, string)))
-    
+    print(f'4: {res4}\n')
+
     # 5
     res5 = ''.join(list(filter(filter5, string)))
+    print(f'5: {res5}\n')
 
     # 6
     res6 = list(filter(filter6, string.split(' ')))
+    print(f'6: {res6}\n')
 
     # 7
     res7 = dict(zip(string.split(' '), map(len, string.split(' '))))
+    print(f'7: {res7}\n')
 
     # 8
     res8 = list(set(filter(filter8, string)))
-
+    print(f'8: {res8}\n')
+    
     # 9
     res9 = list(map(lambda x: x**2, range(101)))
-    
+    print(f'9: {res9}\n')
+
     # 10
     coords = [(1, 1), (1, 3), (-1, -7)]
     res10 = list(map(lambda x: (x[0] ** 2 + x[1] ** 2) ** 0.5, filter(filter10, coords)))
+    print(f'10: {res10}\n')
 
     # 11
     res11 = list(map(lambda x: x**2, filter(filter11, range(2, 28))))
-    
+    print(f'11: {res11}\n')
+
     # 12
     coords = [(1, 1), (1, 3), (-1, -7), (10, 20)]
     res12 = sorted(map(lambda x: (x[0] ** 2 + x[1] ** 2) ** 0.5, filter(filter12, coords)))[-1]
+    print(f'12: {res12}\n')
 
     # 13
     nums_first = [1, 2, 3, 5, 8]
     nums_second = [2, 4, 8, 16, 32]
     _ = list(zip(nums_first, nums_second))
     res13 = list(zip(map(lambda x: x[0] - x[1], _), map(lambda x: x[0] + x[1], _)))
+    print(f'13: {res13}\n')
 
     # 14
     strings = ['43141', '32441', '431', '4154', '43121', '1234']
     res14 = list(map(lambda x: str(int(x) ** 2), filter(filter14, strings)))
+    print(f'14: {res14}\n')
 
     # 15
     input_str = """name,Petya,Vasya,Masha,Vova grade,5,5,8,3 subject,math,language,physics,math year,1999,2000,1995,1998"""
     res15 = [dict(zip(list([row.split(',')[0] for row in input_str.split(' ')]),\
          list([row.split(',')[i + 1] for row in input_str.split(' ')]))) for i, _ in enumerate(input_str.split(' ')[0].split(',')[1:])]
+    print(f'15: {res15}\n')
 
     # 16
     a = [[11.9, 12.2, 12.9],
@@ -129,6 +144,7 @@ def main():
         [16.3, 16.5, 16.5],
         [17.7, 17.5, 18.1]]
     res16 = [sum(row[i] for row in a) for i in range(len(a[0]))]
-
+    print(f'16: {res16}\n')
+    
 if __name__ == "__main__":
     main()

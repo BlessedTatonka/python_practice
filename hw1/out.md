@@ -2,13 +2,13 @@
 
 <!---next problem-->
 
-+ [Какая-то прорамма](какая-то-прорамма)
++ [Print Greeting](#print-greeting)
 
-## Какая-то прорамма
+## Print Greeting
 
-Напечатать на экран Hello!
+Напечатать на экран Greeting!
 
 ```python
-def print_hello():
-    print('Hello!')
+def print_greeting():
+    print('Greeting!')
 ```
