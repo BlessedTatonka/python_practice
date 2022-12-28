@@ -31,6 +31,8 @@ class StrategyDeal:
         res += f'BANK: {self.__bank}\n'
         res += f'START_PRICE: {self.__entry}\n'
         res += f'STOP_PRICE: {self.__close}\n'
+        res += f'STOP_PERCENT: {round((self.__entry / self.__close - 1) * 100, 3)}%\n'
+        res += f'STOP_BANK: {round(self.__bank * (1 - (self.__entry / self.__close - 1)), 3)}\n'
 
         res += '\n'
 
@@ -66,6 +68,7 @@ def get_number(string):
     return float(res)
 
 def parse_data(data):
+    res = ''
     for deal in data.split('-----')[:-1]:
         bank, entry, close = None, None, None
         targets = []
@@ -80,9 +83,10 @@ def parse_data(data):
                 for item in line.split()[1:]:
                     targets.append(get_number(item))
 
-    sdeal = StrategyDeal(bank, entry, targets, close)
+        sdeal = StrategyDeal(bank, entry, targets, close)
+        res += str(sdeal)
 
-    return str(sdeal)
+    return res
 
 
 
