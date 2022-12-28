@@ -86,6 +86,8 @@ def parse_data(data):
         sdeal = StrategyDeal(bank, entry, targets, close)
         res += str(sdeal)
 
+        res += '-----\n\n'
+
     return res
 
 

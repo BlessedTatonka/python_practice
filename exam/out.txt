@@ -16,6 +16,8 @@ Bank: 1136.71
 Percent: 17.112%
 Bank: 1171.12
 
+-----
+
 BANK: 50.0
 START_PRICE: 3.0
 STOP_PRICE: 2.8542325
@@ -33,4 +35,6 @@ Bank: 54.5
 3 target: 3.4
 Percent: 13.333%
 Bank: 56.666
+
+-----
 
