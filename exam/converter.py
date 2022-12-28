@@ -1,6 +1,6 @@
 
 class StrategyDeal:
-    def __init__(self, bank, entry, targets, close, id):
+    def __init__(self, bank, entry, targets, close):
         self.__bank = bank
         self.__entry = entry
         self.__targets = targets
@@ -22,7 +22,7 @@ class StrategyDeal:
         percents = self.get_target_percents()
 
         for percent in percents:
-            target_banks.append(self.__bank * (100 + percent) / 100)
+            target_banks.append(round(self.__bank * (100 + percent) / 100, 3))
         
         return target_banks
 
@@ -39,8 +39,12 @@ class StrategyDeal:
 
         for index, target in enumerate(self.get_targets()):
             res += f'{index + 1} target: {target}\n'
-            res += f'Percent: {percents[index]}%'
+            res += f'Percent: {percents[index]}%\n'
+            res += f'Bank: {target_banks[index]}\n'
+            res += '\n'
 
+
+        return res
 
 def read_data(file_name):
     with open(file_name, 'r') as fin:
@@ -78,6 +82,7 @@ def parse_data(data):
 
     sdeal = StrategyDeal(bank, entry, targets, close)
 
+    return str(sdeal)
 
 
 
